@@ -1,0 +1,141 @@
+#home {
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg {
+  background-color: #cdeaf8;
+  background-image: url("../asset/blueback.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* co ảnh để phủ kín chiều ngang */
+  width: 100vw; /* 100% chiều ngang màn hình */
+  height: 100vh; /* chiều cao bạn muốn */
+}
+
+.sun {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+
+.sun img {
+  width: 200px;
+  height: 200px;
+}
+.cloud1 {
+  animation: wind 20s 0s infinite linear;
+  position: absolute;
+  z-index: 1;
+  left: 205px;
+  top: 200px;
+}
+.cloud1 img {
+  width: 150px;
+  height: auto;
+}
+
+.cloud2 {
+  animation: wind 20s 0s infinite linear;
+  position: absolute;
+  z-index: 1;
+  right: 756px;
+  top: 100px;
+}
+.cloud2 img {
+  width: 150px;
+  height: auto;
+}
+
+.cloud3 {
+  animation: wind 20s 0s infinite linear;
+  position: absolute;
+  z-index: 1;
+  right: 456px;
+  top: 350px;
+}
+.cloud3 img {
+  width: 150px;
+  height: auto;
+}
+.wave {
+  background-image: url("../asset/sea.png");
+  animation: wind 20s 0s infinite linear;
+  position: absolute;
+  z-index: 5;
+  top: 555px;
+  width: 5000px;
+  height: 250px;
+}
+
+.bird1 {
+  position: absolute;
+  animation: bird 4s 0s infinite linear;
+  z-index: 2;
+  top: 405px;
+  left: 405px;
+}
+
+.bird1 img {
+  width: auto;
+  height: auto;
+}
+
+.bird2 {
+  position: absolute;
+  animation: bird 4s 0s infinite linear;
+  z-index: 2;
+  top: 305px;
+  left: 675px;
+}
+
+.bird2 img {
+  width: auto;
+  height: auto;
+}
+
+@keyframes bird {
+  0% {
+    transform: scale(50%);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100%);
+    transform: translate(-500px, -500px);
+    opacity: 0;
+  }
+}
+
+@keyframes wind {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.ship {
+  background-image: url("../asset/cargo-ship.png");
+  position: absolute;
+  animation: ship 2s 0s infinite linear;
+  z-index: 4;
+  width: 400px;
+  height: 350px;
+  top: 350px;
+  left: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@keyframes ship {
+  0% {
+    transform: translate(-500px, 0px) rotate(10deg);
+  }
+  50% {
+    transform: translate(-500px, 0px) rotateX(-10deg);
+  }
+  100% {
+    transform: translate(-500px, 0px) rotate(10deg);
+  }
+}
